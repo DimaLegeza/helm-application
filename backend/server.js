@@ -39,6 +39,11 @@ app.get('/guestbook', function (req, res) {
   })
 });
 
+app.get('/health', function (req, res) {
+  console.log('health endpoint')
+  res.send("OK")
+});
+
 app.post('/guestbook', function (req, res) {
   if (!req.body) {
     res.statusCode = 400;
